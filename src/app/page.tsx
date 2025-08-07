@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image";
+// import Image from "next/image";
 
 
 import { useState } from "react";
@@ -25,8 +25,8 @@ export default function Home() {
       const data = await res.json();
       // Filter results >= 70%
       setResults(data.filter((r: {score: number}) => r.score >= 70));
-    } catch (e: any) {
-      setError(e.message || "Error occurred");
+    } catch {
+      setError("Failed to fetch. Error occurred");
     }
     setLoading(false);
   };
