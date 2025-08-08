@@ -16,7 +16,7 @@ export default function Home() {
     setError("");
     setResults([]);
     try {
-      const res = await fetch("http://localhost:8000/check_similarity", {
+      const res = await fetch("https://project-detect-backend.onrender.com/check_similarity", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic: input })
